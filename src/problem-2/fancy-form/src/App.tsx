@@ -1,4 +1,5 @@
 // Components
+import Form from "./components/form/Form";
 import ParticleHandler from "./components/particles/ParticleHandler";
 
 // Styling
@@ -9,7 +10,7 @@ const App = () => {
     <div className='master-container'>
       <ParticleHandler />
       <div className='content-container'>
-        Fancy form
+        <Form />
       </div>
     </div>
   );
