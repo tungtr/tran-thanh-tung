@@ -4,7 +4,7 @@ import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 
 // Constants
-import particleOptions from '../../utils/constants/particleOptions.json'
+import particleOptions from '../../utils/constants/particleOptions.json';
 
 // Types
 import type { Engine } from 'tsparticles-engine';

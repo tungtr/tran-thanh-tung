@@ -5,31 +5,36 @@ import { useState, useEffect } from 'react';
 import Form from "./components/form/Form";
 import ParticleHandler from "./components/particles/ParticleHandler";
 
+// Interfaces
+import { IToken } from "@interfaces/Interfaces";
+
 // Styling
 import './App.css';
 
 // Types
 import { Dispatch, SetStateAction } from 'react';
 
-const getCoinTypes = async (setCoinTypes: Dispatch<SetStateAction<any>>) => {
+const getTokens = async (setTokens: Dispatch<SetStateAction<IToken[]>>) => {
   const response = await fetch('https://interview.switcheo.com/prices.json');
-  const coinTypes = await response.json();
-  setCoinTypes(coinTypes);
+  const tokens = await response.json();
+  setTokens(tokens);
 };
 
 const App = () => {
-  const [coinTypes, setCoinTypes] = useState([]);
+  const [tokens, setTokens] = useState<IToken[]>([]);
 
   useEffect(() => {
-    getCoinTypes(setCoinTypes);
+    getTokens(setTokens);
   }, []);
 
   return (
     <div className='master-container'>
       <ParticleHandler />
-      <div className='content-container'>
-        <Form />
-      </div>
+      {tokens.length > 0 &&
+        <div className='content-container'>
+          <Form tokens={tokens} />
+        </div>
+      }
     </div>
   );
 }
