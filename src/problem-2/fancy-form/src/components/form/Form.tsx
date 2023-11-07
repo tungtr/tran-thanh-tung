@@ -19,7 +19,7 @@ const Form = ({
   const [sendToken, setSendToken] = useState<IToken>(tokens[0]);
   const [receiveValue, setReceiveValue] = useState(0);
   const [receiveToken, setReceiveToken] = useState<IToken>(tokens[0]);
-  const calcReceive = (data: IForm) => setReceiveValue((data.send * receiveToken.price) / sendToken.price);
+  const calcReceive = (data: IForm) => setReceiveValue((data.send * sendToken.price) / receiveToken.price);
 
   const { register, getValues, handleSubmit, formState: { errors } } = useForm<IForm>();
   const onSubmit: SubmitHandler<IForm> = (data) => calcReceive(data);

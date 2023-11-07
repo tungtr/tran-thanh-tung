@@ -23,7 +23,7 @@ const TokenInfo = ({
     <div className="token-container">
       <span className='token-info'>
         <div className='token-header'>
-          <img src={`tokens/${currentToken.currency}.svg`} />
+          <img src={`tokens/${currentToken.currency}.svg`} width={24} height={24} />
           <span className='token-currency'><b>Price: </b>{currentToken.price}</span>
         </div>
         <div className='token-date'>
