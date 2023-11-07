@@ -1,0 +1,33 @@
+{
+  "fullScreen": {
+    "enable": true,
+    "zIndex": 10
+  },
+  "particles": {
+    "move": {
+      "enable": true,
+      "speed": {
+        "min": 0.2,
+        "max": 0.5
+      }
+    },
+    "number": {
+      "value": 180
+    },
+    "opacity": {
+      "value": {
+        "min": 0.25,
+        "max": 0.5
+      }
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "size": {
+      "value": {
+        "min": 0.8,
+        "max": 1
+      }
+    }
+  }
+}

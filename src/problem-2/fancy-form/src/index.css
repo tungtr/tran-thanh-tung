@@ -1,0 +1,19 @@
+:root {
+  --light-grey: #92889e;
+  --grey: #383042;
+  --dark: #0f051a;
+
+  --background: linear-gradient(135deg, #0d071a, var(--dark));
+  --button-background: linear-gradient(-45deg, #5a189a, #9d4edd);
+  --form-background: linear-gradient(-45deg,  rgba(43, 34, 59, 0.25), rgba(216, 205, 239, .05), rgba(255, 255, 255, .05));
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
