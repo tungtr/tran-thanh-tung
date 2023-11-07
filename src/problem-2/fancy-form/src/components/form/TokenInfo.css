@@ -1,0 +1,25 @@
+.token-container {
+  border-radius: 12px;
+  border: 1px solid #383042;
+  color: white;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  margin-top: 12px;
+  padding: 16px;
+}
+
+.token-header {
+  display: flex;
+    align-items: center;
+}
+
+.token-currency {
+  margin-left: 8px;
+}
+
+.token-date {
+  color: #92889e;
+  font-size: 14px;
+  margin-top: 8px;
+}

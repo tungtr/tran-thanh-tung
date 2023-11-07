@@ -2,15 +2,14 @@
 import { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
+// Components
+import TokenInfo from './TokenInfo';
+
 // Interfaces
-import { IToken } from "@interfaces/Interfaces";
+import { IToken, IForm } from "@interfaces/Interfaces";
 
 // Styling
 import './Form.css';
-
-interface IForm {
-  send: number;
-};
 
 const Form = ({
   tokens
@@ -39,17 +38,10 @@ const Form = ({
             Amount to send
           </label>
           <input {...register('send', { required: true })} />
-          <span className='space' />
-          <select name='token-select' onChange={(event) => setSendToken(tokens[event.target.selectedIndex])}>
-            {tokens.map((token, idx) => (
-              <option key={idx} value={token.currency}>
-                {token.currency}
-              </option>
-            ))}
-          </select>
           {errors.send && errors.send.type === 'required' &&
             <p className='alert'>*This field is required</p>
           }
+          <TokenInfo currentToken={sendToken} tokens={tokens} setToken={setSendToken} />
         </div>
 
         <button>
@@ -61,14 +53,7 @@ const Form = ({
             Amount to receive
           </label>
           <input value={receiveValue} readOnly />
-          <span className='space' />
-          <select name='token-select' onChange={(event) => setReceiveToken(tokens[event.target.selectedIndex])}>
-            {tokens.map((token, idx) => (
-              <option key={idx} value={token.currency}>
-                {token.currency}
-              </option>
-            ))}
-          </select>
+          <TokenInfo currentToken={receiveToken} tokens={tokens} setToken={setReceiveToken} />
         </div>
       </form>
     </div>

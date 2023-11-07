@@ -3,3 +3,7 @@ export interface IToken {
   date: Date;
   price: number;
 };
+
+export interface IForm {
+  send: number;
+};

@@ -38,7 +38,7 @@ input, select {
 }
 
 input {
-  min-width: 320px;
+  min-width: 400px;
 }
   input:focus {
     color: white;
