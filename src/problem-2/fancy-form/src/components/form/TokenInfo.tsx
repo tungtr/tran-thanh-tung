@@ -30,7 +30,7 @@ const TokenInfo = ({
           Date: {moment(currentToken.date).format('DD/MM/YYYY hh:mm:ss')}
         </div>
       </span>
-      <select name='token-select' onChange={(event) => setToken(tokens[event.target.selectedIndex])}>
+      <select onChange={(event) => setToken(tokens[event.target.selectedIndex])}>
         {tokens.map((token, idx) => (
           <option key={idx} value={token.currency}>
             {token.currency}
